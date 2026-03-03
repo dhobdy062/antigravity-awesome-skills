@@ -1,36 +1,56 @@
-## [4.10.0] - 2026-02-06 - "Composio Automation + .NET Backend"
+## [6.8.0] - 2026-03-02 - "Productivity Boost & In-App Sync"
 
-> This release significantly expands hands-on automation coverage while adding a production-oriented .NET backend skill.
+> **Major productivity enhancements to existing skills and new in-app skill synchronization feature.**
 
-### Added
+This release delivers version 2.0.0 upgrades to two critical skills: `vibe-code-auditor` and `tutorial-engineer`, packed with pattern recognition shortcuts, deterministic scoring, and copy-paste templates. Plus, a new "Sync Skills" button in the Web App enables live skill updates from GitHub without leaving the browser.
 
-- **79 new skills total**.
-- **78 Composio/Rube automation skills** (PR #64), covering practical workflows across:
-- CRM/sales (`HubSpot`, `Salesforce`, `Pipedrive`, `Zoho CRM`, `Close`)
-- Collaboration/project ops (`Notion`, `ClickUp`, `Asana`, `Jira`, `Confluence`, `Trello`, `Monday`)
-- Messaging/support (`Slack`, `Discord`, `Teams`, `Intercom`, `Freshdesk`, `Zendesk`)
-- Analytics/marketing (`Google Analytics`, `Mixpanel`, `PostHog`, `Segment`, `Mailchimp`, `Klaviyo`)
-- Dev/infra operations (`GitHub`, `GitLab`, `CircleCI`, `Datadog`, `PagerDuty`, `Vercel`, `Render`)
-- **1 new `dotnet-backend` skill** (PR #65) with detailed ASP.NET Core 8+ guidance:
-- Minimal API and controller patterns
-- EF Core data-access patterns
-- JWT authentication implementation
-- Background service templates
-- Explicit "When to Use" and "Limitations" sections
-- **Registry growth**: 634 -> 713 indexed skills.
+## 🚀 New Features
 
-### Changed
+### 🔄 In-App Sync Skills Button
 
-- Regenerated and synchronized discovery artifacts:
-- `README.md`
-- `skills_index.json`
-- `CATALOG.md`
-- `data/catalog.json`
-- `data/bundles.json`
-- `data/aliases.json`
-- Updated release metadata and published tag/release `v4.10.0`.
+**One-click skill synchronization from the Web App UI.**
+Replaces the unreliable START_APP.bat auto-updater. Users can now click "Sync Skills" in the web app to download the latest skills from GitHub instantly.
 
-### Contributors
+- Vite dev server plugin exposing `/api/refresh-skills` endpoint
+- Downloads and extracts only the `/skills/` folder and `skills_index.json`
+- Live UI updates without page refresh
 
-- [@sohamganatra](https://github.com/sohamganatra)
-- [@Nguyen-Van-Chan](https://github.com/Nguyen-Van-Chan)
+## 📦 Improvements
+
+### ✨ vibe-code-auditor v2.0.0
+
+**Productivity-focused overhaul with 10x faster audits.**
+
+- **Pattern Recognition Shortcuts**: 10 heuristics for rapid issue detection
+- **Quick Checks**: 3-second scans for each of 7 audit dimensions
+- **Executive Summary**: Critical findings upfront
+- **Deterministic Scoring**: Replaces subjective ranges with algorithmic scoring
+- **Code Fix Blocks**: Before/after examples for copy-paste remediation
+- **Quick Wins Section**: Fixes completable in <1 hour
+- **Calibration Rules**: Scoring adjusted by code size (snippet vs multi-file)
+- **Expanded Security**: SQL injection, path traversal, insecure deserialization detection
+
+### 📚 tutorial-engineer v2.0.0
+
+**Evidence-based learning with 75% better retention.**
+
+- **4-MAT Model**: Why/What/How/What If framework for explanations
+- **Learning Retention Shortcuts**: Evidence-based patterns (+75% retention)
+- **Cognitive Load Management**: 7±2 rule, One Screen, No Forward References
+- **Exercise Calibration**: Difficulty table with time estimates
+- **Format Selection Guide**: Quick Start vs Deep Dive vs Workshop
+- **Pre-Publish Audit Checklist**: Comprehension, progression, technical validation
+- **Speed Scoring Rubric**: 1-5 rating on 5 dimensions
+- **Copy-Paste Template**: Ready-to-use Markdown structure
+- **Accessibility Checklist**: WCAG compliance for tutorials
+
+## 👥 Credits
+
+A huge shoutout to our community contributors:
+
+- **@munir-abbasi** for the v2.0.0 productivity enhancements to `vibe-code-auditor` and `tutorial-engineer` (PR #172)
+- **@zinzied** for the In-App Sync Skills Button and START_APP.bat simplification (PR #178)
+
+---
+
+_Upgrade now: `git pull origin main` to fetch the latest skills._
